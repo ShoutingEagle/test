@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 
 const cors = require('cors')
-app.use(cors())
+app.use(cors({
+    origin: 'http://127.0.0.1:5500',  // Replace with the allowed origin
+  }));
 
 
 app.get('/',(req,res) => {
